@@ -20,7 +20,7 @@ const ImagensContainer = styled.section`
   gap: 24px;
 `;
 
-const Galeria = ({ fotos = [], aoFotoSelecionada }) => {
+const Galeria = ({ fotos = [], aoFotoSelecionada, aoAlternarFavorito }) => {
 
   return (
     <>
@@ -35,6 +35,7 @@ const Galeria = ({ fotos = [], aoFotoSelecionada }) => {
                   key={foto.id}
                   foto={foto}
                   aoZoomSolicitado={aoFotoSelecionada}
+                  aoAlternarFavorito={aoAlternarFavorito}
                 />
               );
             })
@@ -50,6 +51,7 @@ const Galeria = ({ fotos = [], aoFotoSelecionada }) => {
 Galeria.propTypes = {
   fotos: PropTypes.array,
   aoFotoSelecionada: PropTypes.any,
+  aoAlternarFavorito: PropTypes.any,
 }
 
 export default Galeria;

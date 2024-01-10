@@ -33,9 +33,23 @@ const ConteudoGaleria = styled.section`
 `;
 
 const App = () => {
-  // eslint-disable-next-line no-unused-vars
   const [fotosDaGaleria, setFotosDaGaleria] = useState(fotos);
   const [fotoSelecionada, setFotoSelecionada] = useState(null);
+
+  const aoAlternarFavorito = (foto) => {
+    if (foto.id === fotoSelecionada?.id) {
+      setFotosDaGaleria({
+        ...fotoSelecionada,
+        favorita: !fotoSelecionada.favorita
+      })
+    }
+    setFotosDaGaleria(fotosDaGaleria.map(fotoDaGaleria => {
+      return {
+        ...fotoDaGaleria,
+        favorita: (fotoDaGaleria.id === foto.id) ? !foto.favorita : fotoDaGaleria.favorita
+      }
+    }));
+  };
 
   return (
     <FundoGradiente>
@@ -50,13 +64,17 @@ const App = () => {
               backgroundImage={bannerBackground}
             />
             <Galeria
-              aoFotoSelecionada={foto => setFotoSelecionada(foto)} 
+              aoFotoSelecionada={foto => setFotoSelecionada(foto)}
+              aoAlternarFavorito={aoAlternarFavorito}
               fotos={fotosDaGaleria}
             />
           </ConteudoGaleria>
         </MainContainer>
       </AppContainer>
-      <ModalZoom foto={fotoSelecionada}/>
+      <ModalZoom
+        foto={fotoSelecionada}
+        aoAlternarFavorito={aoAlternarFavorito}
+      />
     </FundoGradiente>
   )
 }
