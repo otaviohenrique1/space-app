@@ -1,8 +1,23 @@
-# React + Vite
+# space-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição
 
-Currently, two official plugins are available:
+Projeto feito no curso de 'React: estilize componentes com Styled Components e manipule arquivos estáticos' da Alura.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instruções
+
+- Rodar "npm install" (sem as aspas) para instalar as dependencias.
+
+- Rodar o comando "npm run dev" (sem as aspas) para iniciar o projeto.
+
+## Tecnologias
+
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [React](https://react.dev/)
+- [vitejs](https://vitejs.dev/)
+
+## Feito por
+
+- Otavio Henrique
+- [Linkedin](https://www.linkedin.com/in/otavio-henrique-de-lima-e-silva-94076ba1/)
+- [Site pessoal](https://otaviohls.vercel.app/)
